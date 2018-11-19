@@ -1,0 +1,32 @@
+.employee {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.icon--employee {
+  width: 70px;
+  height: 70px;
+}
+
+.card {
+  width: 10rem;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-name {
+ text-align: center;
+ margin: 5px;
+ padding: 2px;
+}
+
+.card-link {
+  margin: 12px 0 0 0;
+  font-size: 0.7em;
+}
