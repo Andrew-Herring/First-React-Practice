@@ -7,46 +7,30 @@ import OwnerList from './owners/OwnerList'
 
 
 class ApplicationViews extends Component {
-    employeesFromAPI = [
-        { id: 1, name: "Jessica Younker" },
-        { id: 2, name: "Jordan Nelson" },
-        { id: 3, name: "Zoe LeBlanc" },
-        { id: 4, name: "Blaise Roberts" }
-    ]
+  state = {
+    locations: [],
+    employees: [],
+    animals: [],
+    owners: []
+}
 
-    locationsFromAPI = [
-        { id: 1, name: "Nashville North", address: "500 Circle Way" },
-        { id: 2, name: "Nashville South", address: "10101 Binary Court" }
-    ]
+componentDidMount() {
+  const newState = {}
 
-    animalsFromAPI = [
-        { id: 1, name: "Gus" },
-        { id: 2, name: "Finn" },
-        { id: 3, name: "Sadie" },
-        { id: 4, name: "Amos" },
-        { id: 5, name: "Dooley" },
-        { id: 6, name: "Kiwi" },
-        { id: 7, name: "Olive" },
-        { id: 8, name: "Daisy" }
-    ]
-
-    ownersFromAPI = [
-      { id: 1, name: "Andy" },
-      { id: 2, name: "Kevin" },
-      { id: 3, name: "Lacey" },
-      { id: 4, name: "Matt" },
-      { id: 5, name: "Daniel" },
-      { id: 6, name: "Brenden" },
-      { id: 7, name: "Ousama" },
-      { id: 8, name: "Richard" }
-  ]
-
-    state = {
-        employees: this.employeesFromAPI,
-        locations: this.locationsFromAPI,
-        animals: this.animalsFromAPI,
-        owners: this.ownersFromAPI
-    }
+  fetch("http://localhost:5002/animals")
+      .then(r => r.json())
+      .then(animals => newState.animals = animals)
+      .then(() => fetch("http://localhost:5002/employees")
+      .then(r => r.json()))
+      .then(employees => newState.employees = employees)
+      .then(() => fetch("http://localhost:5002/locations")
+      .then(r => r.json()))
+      .then(locations => newState.locations = locations)
+      .then(() => fetch("http://localhost:5002/owners")
+      .then(r => r.json()))
+      .then(owners => newState.owners = owners)
+      .then(() => this.setState(newState))
+}
 
     render() {
         return (
