@@ -1,13 +1,7 @@
-.employee {
+.locations {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-}
-
-.icon--employee {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
 }
 
 .card {
@@ -24,12 +18,13 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
-.card-name {
- margin: 5px;
- padding: 2px;
-}
+.card-address {
+  margin: 5px;
+  padding: 2px;
+ }
 
 .card-link {
   margin: 12px 0 0 0;

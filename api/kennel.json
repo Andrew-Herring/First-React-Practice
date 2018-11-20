@@ -2,87 +2,101 @@
   "employees": [
     {
       "id": 1,
-      "name": "Jessica Younker"
+      "name": "Greg",
+      "details": "Really likes plaid, always has headphones on -- possibly a cyborg"
     },
     {
       "id": 2,
-      "name": "Jordan Nelson"
+      "name": "Jenna",
+      "details": "Is a Jenna"
     },
     {
       "id": 3,
-      "name": "Zoe LeBlanc"
+      "name": "John",
+      "details": "Will tell you to not be an asshole"
     },
     {
       "id": 4,
-      "name": "Blaise Roberts"
+      "name": "Joe",
+      "details": "Will make you eat broccoli"
     }
   ],
   "locations": [
     {
       "id": 1,
       "name": "Nashville North",
-      "address": "500 Circle Way"
+      "address": "360 Circle Way",
+      "info": "Our location in northern Nashville!  We've got lots of animals to adopt so come check us out"
     },
     {
       "id": 2,
       "name": "Nashville South",
-      "address": "10101 Binary Court"
+      "address": "10101 Binary Court",
+      "info": "Our location in southern Nashville!  Our shelter is way nicer than those north guys.  All of our dogs eat biscuits for breakfast everyday"
     }
   ],
   "animals": [
     {
       "id": 1,
-      "name": "Gus"
+      "name": "Gus",
+      "breed": "Big mean cat"
     },
     {
       "id": 2,
-      "name": "Finn"
+      "name": "Finn",
+      "breed": "Best dog ever"
     },
     {
       "id": 3,
-      "name": "Sadie"
+      "name": "Sadie",
+      "breed": "Black Cat"
     },
     {
       "id": 4,
-      "name": "Amos"
+      "name": "Amos",
+      "breed": "Blind as af"
     },
     {
       "id": 5,
-      "name": "Dooley"
+      "name": "Dooley",
+      "breed": "Super old"
     },
     {
       "id": 6,
-      "name": "Kiwi"
-    },
-    {
-      "id": 7,
-      "name": "test animal"
+      "name": "Kiwi",
+      "breed": "Has more insta followers than you"
     }
   ],
   "owners": [
     {
       "id": 1,
-      "name": "Andy"
+      "name": "Andy",
+      "about": "Human give me attention meow snuggles up to shoulders or knees and purrs you to sleep so get suspicious of own shadow then go play with toilette paper see owner, run in terror destroy couch as revenge but carefully drink from water glass and then spill it everywhere and proceed to lick the puddle."
     },
     {
       "id": 2,
-      "name": "Kevin"
+      "name": "Kevin",
+      "about": "Human give me attention meow snuggles up to shoulders or knees and purrs you to sleep so get suspicious of own shadow then go play with toilette paper see owner, run in terror destroy couch as revenge but carefully drink from water glass and then spill it everywhere and proceed to lick the puddle."
     },
     {
       "id": 3,
-      "name": "Lacey"
+      "name": "Lacey",
+      "about": "Human give me attention meow snuggles up to shoulders or knees and purrs you to sleep so get suspicious of own shadow then go play with toilette paper see owner, run in terror destroy couch as revenge but carefully drink from water glass and then spill it everywhere and proceed to lick the puddle."
     },
     {
       "id": 4,
-      "name": "Matt"
+      "name": "Matt",
+      "about": "Human give me attention meow snuggles up to shoulders or knees and purrs you to sleep so get suspicious of own shadow then go play with toilette paper see owner, run in terror destroy couch as revenge but carefully drink from water glass and then spill it everywhere and proceed to lick the puddle."
     },
     {
       "id": 5,
-      "name": "Daniel"
+      "name": "Daniel",
+      "about": "Human give me attention meow snuggles up to shoulders or knees and purrs you to sleep so get suspicious of own shadow then go play with toilette paper see owner, run in terror destroy couch as revenge but carefully drink from water glass and then spill it everywhere and proceed to lick the puddle."
     },
     {
       "id": 6,
-      "name": "Brenden"
+      "name": "Brenden",
+      "about": "Human give me attention meow snuggles up to shoulders or knees and purrs you to sleep so get suspicious of own shadow then go play with toilette paper see owner, run in terror destroy couch as revenge but carefully drink from water glass and then spill it everywhere and proceed to lick the puddle."
     }
   ]
 }

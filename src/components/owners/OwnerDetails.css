@@ -1,22 +1,20 @@
-.employee {
+.owners {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
-.icon--employee {
+.icon--rebel {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
 }
 
-.card {
-  width: 20rem;
-  border: .5px solid black;
-  box-shadow: 1px 1px 1px black;
+.detailsCard {
+  width: 50rem;
+  height: 20rem;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px black;
   background-color: #FFF4D5;
-  margin: 10px;
-  text-align: center;
 }
 
 .card-title {
@@ -27,9 +25,10 @@
 }
 
 .card-name {
- margin: 5px;
- padding: 2px;
-}
+  text-align: center;
+  margin: 5px;
+  padding: 2px;
+ }
 
 .card-link {
   margin: 12px 0 0 0;
