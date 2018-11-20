@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import "./OwnerDetails.css"
+import "./Owner.css"
 import rebel from "./rebel.jpeg"
 
 
@@ -20,7 +20,7 @@ export default class OwnerDetail extends Component {
                         <a href=" "
                             onClick={() => this.props.deleteOwner(owner.id)
                             .then(() => this.props.history.push("/owners"))}
-                            className="card-link">Delete</a>
+                            className="card-link">Remove Owner</a>
                     </div>
                 </div>
             </section>

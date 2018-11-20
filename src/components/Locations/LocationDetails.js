@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import "./LocationDetails.css"
+import "./Location.css"
 
 
 export default class LocationDetail extends Component {
@@ -15,10 +15,10 @@ export default class LocationDetail extends Component {
                             <p className="card-name">{location.name}</p>
                         </h4>
                         <p className="card-title">{location.info}</p>
-                        <a href=" "
+                        {/* <a href=" "
                             onClick={() => this.props.deleteLocation(location.id)
                             .then(() => this.props.history.push("/locations"))}
-                            className="card-link">Delete</a>
+                            className="card-link">Remove Location</a> */}
                     </div>
                 </div>
             </section>
