@@ -18,6 +18,7 @@
   background-color: #FFF4D5;
   margin: 10px;
   text-align: center;
+  border-radius: 10px;
 }
 
 .card-title {
@@ -28,6 +29,11 @@
   text-align: center;
 }
 
+.card-name {
+  text-align: center;
+  margin: 10px;
+ }
+
 .card-address {
   margin: 5px;
   padding: 2px;
@@ -36,4 +42,14 @@
 .card-link {
   margin: 12px 0 0 0;
   font-size: 0.7em;
+}
+
+.detailsCard {
+  width: 50rem;
+  height: 20rem;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px black;
+  background-color: #FFF4D5;
+  border-radius: 10px;
+  text-align: center;
 }

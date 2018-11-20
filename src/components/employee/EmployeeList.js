@@ -12,14 +12,14 @@ export default class EmployeeList extends Component {
             this.props.employees.map(employee =>
                 <div key={employee.id} className="card">
                     <div className="card-body">
-                        <h5 className="card-title">
+                        <h4 className="card-title">
                             <img src={peon} className="icon--employee" alt="peon pic" />
-                            <p className="card-name">{employee.name}</p>
+                            <p className="card-name">{employee.name}</p></h4>
                             <Link className="nav-link" to={`/employees/${employee.id}`}>Details</Link>
                             <a href=" "
                                 onClick={() => this.props.deleteEmployee(employee.id)}
                                 className="card-link">Fire Employee</a>
-                        </h5>
+                        
                     </div>
                 </div>
             )

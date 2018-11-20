@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import "./AnimalDetails.css"
+import "./Animal.css"
 import dogmeat from "./dogmeat.jpg"
 
 
@@ -20,7 +20,7 @@ export default class AnimalDetail extends Component {
                         <a href=" "
                             onClick={() => this.props.deleteAnimal(animal.id)
                             .then(() => this.props.history.push("/animals"))}
-                            className="card-link">Delete</a>
+                            className="card-link">Adopt</a>
                     </div>
                 </div>
             </section>

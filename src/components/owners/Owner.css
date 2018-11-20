@@ -1,33 +1,13 @@
-.owner {
+.owners {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
-.icon--owner {
+.icon--rebel {
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
 
-.card {
-  width: 10rem;
-}
-
-.card-title {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-}
-
-.card-name {
- text-align: center;
- margin: 5px;
- padding: 2px;
-}
-
-.card-link {
-  margin: 12px 0 0 0;
-  font-size: 0.7em;
-}

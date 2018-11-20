@@ -1,37 +1,14 @@
-.employee {
+.employees {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
 .icon--employee {
   width: 100px;
   height: 100px;
+  border: 1.5px solid black;
   border-radius: 50%;
 }
 
-.card {
-  width: 20rem;
-  border: .5px solid black;
-  box-shadow: 1px 1px 1px black;
-  background-color: #FFF4D5;
-  margin: 10px;
-  text-align: center;
-}
-
-.card-title {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-}
-
-.card-name {
- margin: 5px;
- padding: 2px;
-}
-
-.card-link {
-  margin: 12px 0 0 0;
-  font-size: 0.7em;
-}
