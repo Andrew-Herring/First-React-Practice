@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from "react"
 import AnimalList from './animals/AnimalList'
 import LocationList from './Locations/LocationList'
@@ -13,8 +13,11 @@ import EmployeeDetail from './employee/EmployeeDetails'
 import OwnerDetail from './owners/OwnerDetails'
 import LocationDetail from './Locations/LocationDetails'
 import AnimalForm from './animals/AnimalForm'
+import Login from './authentication/Login'
 
 class ApplicationViews extends Component {
+  isAuthenticated = () => sessionStorage.getItem("credentials") !== null
+
   state = {
     locations: [],
     employees: [],
@@ -89,9 +92,17 @@ addAnimal = (animal) => AnimalManager.post(animal)
     render() {
         return (
             <React.Fragment>
+                
+                <Route path="/login" component={Login} />
+
+
                 <Route exact path="/" render={(props) => {
-                    return <LocationList 
-                    locations={this.state.locations} />
+                    if (this.isAuthenticated()) {
+                      return <LocationList deleteLocation={this.deleteLocation}
+                              locations={this.state.locations} />
+                      } else {
+                      return <Redirect to="/login" />
+                      }
                 }} />
                 <Route path="/locations/:locationId(\d+)" render={(props) => {
                     return <LocationDetail {...props} 
@@ -102,9 +113,12 @@ addAnimal = (animal) => AnimalManager.post(animal)
 
 
                 <Route exact path="/animals" render={(props) => {
-                        return <AnimalList {...props}
-                       deleteAnimal={this.deleteAnimal}
-                       animals={this.state.animals} />
+                        if (this.isAuthenticated()) {
+                          return <AnimalList deleteAnimal={this.deleteAnimal}
+                                  animals={this.state.animals} />
+                          } else {
+                          return <Redirect to="/login" />
+                          }
                 }} />
                 <Route path="/animals/new" render={(props) => {
                        return <AnimalForm {...props}
@@ -120,8 +134,12 @@ addAnimal = (animal) => AnimalManager.post(animal)
 
 
                 <Route exact path="/employees" render={(props) => {
-                     return <EmployeeList 
-                     employees={this.state.employees} />
+                   if (this.isAuthenticated()) {
+                    return <EmployeeList deleteEmployee={this.deleteEmployee}
+                            employees={this.state.employees} />
+                    } else {
+                    return <Redirect to="/login" />
+                    }
                 }} />
                 <Route path="/employees/:employeeId(\d+)" render={(props) => {
                     return <EmployeeDetail {...props} 
@@ -132,14 +150,20 @@ addAnimal = (animal) => AnimalManager.post(animal)
 
 
                 <Route exact path="/owners" render={(props) => {
-                     return <OwnerList 
-                     owners={this.state.owners} />
+                     if (this.isAuthenticated()) {
+                      return <OwnerList deleteOwner={this.deleteOwner}
+                              owners={this.state.owners} />
+                      } else {
+                      return <Redirect to="/login" />
+                      }
                 }} />
                 <Route path="/owners/:ownerId(\d+)" render={(props) => {
                     return <OwnerDetail {...props} 
                     deleteOwner={this.deleteOwner} 
                     owners={this.state.owners} />
                 }} />
+
+
             </React.Fragment>
         )
     }
