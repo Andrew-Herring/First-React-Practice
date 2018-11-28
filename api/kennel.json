@@ -65,6 +65,12 @@
       "id": 6,
       "name": "Kiwi",
       "breed": "Has more insta followers than you"
+    },
+    {
+      "name": "TEST ANIMAL",
+      "breed": "ANIMAL TEST",
+      "employeeId": 4,
+      "id": 7
     }
   ],
   "owners": [

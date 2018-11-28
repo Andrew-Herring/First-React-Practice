@@ -1,6 +1,8 @@
 .loginForm {
   margin: 50px;
   padding: 10px;
+  color: whitesmoke;
+  text-shadow: 1px 1px black;
 }
 
 .formLabel {

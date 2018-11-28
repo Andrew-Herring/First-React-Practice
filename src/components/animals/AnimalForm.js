@@ -28,6 +28,7 @@ export default class AnimalForm extends Component {
             const animal = {
                 name: this.state.animalName,
                 breed: this.state.breed,
+                // .find populates the drop down menu with employees
                 employeeId: this.props.employees.find(e => e.name === this.state.employee).id
             }
 
@@ -42,7 +43,7 @@ export default class AnimalForm extends Component {
                 <form className="animalForm">
                     <div className="form-group">
                         <label htmlFor="animalName">Animal Name</label>
-                        <input type="text" required="true"
+                        <input type="text" required
                                className="form-control"
                                onChange={this.handleFieldChange}
                                id="animalName"
@@ -50,7 +51,7 @@ export default class AnimalForm extends Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="breed">Breed</label>
-                        <input type="text" required="true"
+                        <input type="text" required
                                className="form-control"
                                onChange={this.handleFieldChange}
                                id="breed" placeholder="Breed" />
