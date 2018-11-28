@@ -17,7 +17,6 @@ import Login from './authentication/Login'
 
 class ApplicationViews extends Component {
   isAuthenticated = () => sessionStorage.getItem("credentials") !== null
-
   state = {
     locations: [],
     employees: [],
@@ -113,11 +112,12 @@ addAnimal = (animal) => AnimalManager.post(animal)
 
 
                 <Route exact path="/animals" render={(props) => {
-                        if (this.isAuthenticated()) {
-                          return <AnimalList deleteAnimal={this.deleteAnimal}
-                                  animals={this.state.animals} />
-                          } else {
-                          return <Redirect to="/login" />
+                    if (this.isAuthenticated()) {
+                      return <AnimalList {...props}
+                        deleteAnimal={this.deleteAnimal}
+                        animals={this.state.animals} />
+                        } else {
+                        return <Redirect to="/login" />
                           }
                 }} />
                 <Route path="/animals/new" render={(props) => {
@@ -134,9 +134,11 @@ addAnimal = (animal) => AnimalManager.post(animal)
 
 
                 <Route exact path="/employees" render={(props) => {
-                   if (this.isAuthenticated()) {
-                    return <EmployeeList deleteEmployee={this.deleteEmployee}
-                            employees={this.state.employees} />
+                    if (this.isAuthenticated()) {
+                      return <EmployeeList deleteEmployee={this.deleteEmployee}
+                            employees={this.state.employees}
+                            animals={this.state.animals}
+                            />
                     } else {
                     return <Redirect to="/login" />
                     }
@@ -150,7 +152,7 @@ addAnimal = (animal) => AnimalManager.post(animal)
 
 
                 <Route exact path="/owners" render={(props) => {
-                     if (this.isAuthenticated()) {
+                    if (this.isAuthenticated()) {
                       return <OwnerList deleteOwner={this.deleteOwner}
                               owners={this.state.owners} />
                       } else {
